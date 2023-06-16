@@ -1,0 +1,13 @@
+{
+  "name": "pre-entrega2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./scss/estilo.scss ./css/estilo.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

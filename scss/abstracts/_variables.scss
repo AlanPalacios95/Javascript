@@ -1,0 +1,26 @@
+$color-principal: #32ae91;
+$mobile-font: 14px;
+$mobile-font-title: 16px;
+$tablet-font: 1.8rem;
+$tablet-font-title: 16px;
+$tablet-descripcion: 18px;
+$font-family: "Cabin", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+$font-family-footer: "Roboto", Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+$movil: 576px;
+$tablet: 992px;
+
+$botones-de-redes: (
+    --instagram: #C13584,
+    --facebook: #3b5998,
+    --twitter : #00acee,
+    --linkedin: #0e76a8
+);
+
+@each $botones-de-redes,
+$color in $botones-de-redes {
+    .btn#{$botones-de-redes} {
+        color: $color;
+        font-size: 1.5rem;
+    }
+}
+

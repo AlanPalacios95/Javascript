@@ -1,0 +1,445 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  BOTONES REDES   //////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* .btn--instagram {
+  color: #C13584;
+  font-size: 1.5rem;
+}
+
+.btn--facebook {
+  color: #3b5998;
+  font-size: 1.5rem;
+}
+
+.btn--twitter {
+  color: #00acee;
+  font-size: 1.5rem;
+}
+
+.btn--linkedin {
+  color: #0e76a8;
+  font-size: 1.5rem;
+}
+*/
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  HEADER   ////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+header {
+  background-color: #ccc;
+
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  NAV   //////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+}
+
+
+.nav1__div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.nav1__img {
+  margin-right: 10px;
+  height: 9rem;
+}
+
+.nav1__ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 4rem;
+  font-size: 2rem;
+}
+
+.nav1__li {
+  margin-left: 10px;
+}
+
+.nav1__item {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.icon {
+  padding-right: 14px;
+}
+
+#carrito {
+  background: black;
+  padding: 0.5rem;
+  color: #40caa8;
+}
+
+.nav2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav2__ul {
+  display: flex;
+  list-style: none;
+  font-size: 2rem;
+  gap: 12rem;
+}
+
+.nav2__link {
+  text-decoration: none;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  PORTADA   ////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.portada {
+  width: 100%;
+  height: 33rem;
+}
+
+
+/* Estilo del aside */
+aside {
+  background-color: #d6dce1;
+  border: 2px solid black;
+}
+
+.aside__responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 5rem;
+  padding: 1rem 0;
+}
+
+.aside__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 5rem;
+  padding: 1rem 0;
+}
+
+.valores {
+  background: rgb(14, 132, 122);
+  height: 10rem;
+  width: 12rem;
+  border-radius: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: transform 0.3s ease-in-out;
+}
+
+.valores:hover {
+  transform: scale(1.2);
+  color: #40caa8;
+}
+
+.ico {
+  font-size: 4rem;
+  color: black;
+}
+
+.ico:hover {
+  color: #40caa8;
+}
+
+.valores__p {
+  width: 11rem;
+  text-align: center;
+  font-weight: bolder;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  MAIN   ////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+main {
+  background-color: #cdcdcd;
+}
+
+.menu__inicio {
+  display: grid;
+  grid-template-areas:
+    "main aside"
+    "main aside";
+  grid-template-columns: 80% 20%;
+  max-width: 100%;
+}
+
+.titulo-principal {
+  color: var(--clr-main);
+  margin-bottom: 2rem;
+  background: #000000;
+  text-align: center;
+  color: white;
+  font-size: 4rem;
+  height: 5rem;
+}
+
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  gap: 1rem;
+  padding-left: 1.5rem;
+}
+
+.producto {
+  width: 24.5rem;
+}
+
+.producto-imagen {
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.producto-detalles {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  margin-top: -2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 70%;
+  border-radius: 6%;
+  text-align: center;
+}
+
+
+.producto-titulo {
+  font-size: 1.5rem;
+}
+
+.producto-precio {
+  font-size: 1.3;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  FOOTER   ////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+footer {
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  CARRITO   ////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.contenedor-carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.carrito-vacio,
+.carrito-comprado {
+  color: var(--clr-main);
+}
+
+.carrito-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carrito-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-gray);
+  color: var(--clr-main);
+  padding: .5rem;
+  border-radius: 1rem;
+}
+
+.carrito-producto-imagen {
+  width: 11rem;
+  border-radius: 1rem;
+}
+
+
+.carrito-producto small {
+  font-size: 1.75rem;
+}
+
+.carrito-producto-eliminar {
+  font-size: 2rem;
+  margin-right: 3rem;
+  background: #ccc;
+  border: 0;
+}
+
+.carrito-acciones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carrito-acciones-derecha {
+  display: flex;
+}
+
+.carrito-acciones-total {
+  display: flex;
+  background-color: var(--clr-gray);
+  padding: 1rem;
+  color: var(--clr-main);
+  text-transform: uppercase;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  gap: 1rem;
+}
+
+.carrito-acciones-vaciar {
+  display: flex;
+  background-color: black;
+  padding: 1rem;
+  text-transform: uppercase;
+  color: white;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  gap: 1rem;
+  flex-direction: row;
+  align-items: center;
+}
+
+.carrito-producto-p {
+  font-size: 1.5rem;
+}
+
+
+.carrito-acciones-comprar {
+
+  background: black;
+  color: white;
+  margin-right: 10rem;
+}
+
+.header-mobile {
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.disabled {
+  display: none;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  BOTON   ////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.button {
+  background: none;
+  color: #40caa8;
+  cursor: pointer;
+  position: relative;
+  width: 80%;
+  padding: 2px;
+  margin: 10px auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+
+.button:hover {
+  background-color: #40caa8;
+  color: white;
+}
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////  ASIDE   ////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.aside__ul {
+  font-size: 2rem;
+  text-align: center;
+  list-style: none;
+}
+
+.aside__nombre--digimon {
+  font-size: 1.5rem;
+}
+
+.aside__img--digimon {
+  height: 9rem;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1220px) {
+  .menu__inicio {
+    display: grid;
+    grid-template-areas:
+      "main"
+      "aside";
+    grid-row: 1fr, 1fr;
+    grid-template-columns: 100%;
+  }
+
+
+  .nav1__ul {
+    gap: 0;
+  }
+
+  .nav2__ul {
+    font-size: 1.5rem;
+    gap: 2rem;
+  }
+
+  .contenedor-productos {
+    grid-template-columns: repeat(2, 50%);
+    row-gap: 2rem;
+    padding: 1rem 5rem;
+  }
+
+  .aside__responsive {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .valores {
+    height: 9rem;
+    width: 10rem;
+    margin: 0.5rem;
+  }
+
+  .valores__p {
+    width: 8rem;
+  }
+
+  .producto {
+    width: 20rem;
+  }
+}
