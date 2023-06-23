@@ -25,6 +25,7 @@ function cargarProductos(productosElegidos) {
         <div class="producto-detalles">
             <h3 class="producto-titulo">${producto.titulo}</h3>
             <p class="producto-precio">$${producto.precio}</p>
+                <span id="info" class="info">Detalles</span>
             <button class="button producto-agregar" id="${producto.id}">
                 <span class="button_lg">
                     <span class="button_sl"></span>
@@ -69,12 +70,12 @@ function agregarAlCarrito(e) {
         text: "Se agrego el producto =)",
         duration: 3000,
         style: {
-        background: "#40caa8",
-    },
-        
-}).showToast();
-actualizarNumerito();
-localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+            background: "#40caa8",
+        },
+
+    }).showToast();
+    actualizarNumerito();
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -95,4 +96,35 @@ if (productosEnCarritoLS) {
     productosEnCarrito = [];
 }
 
+////////////////////////////////////////////
+function verInfo() {
+    let info = document.querySelectorAll(".info");
+    info.forEach(infoElement => {
+        infoElement.addEventListener("click", function () {
+            let idProducto = this.parentNode.querySelector('.producto-agregar').id;
+            let producto = productos.find(producto => producto.id === idProducto);
+            if (producto) {
+                let divInfo = document.createElement("div");
+                divInfo.classList.add("div_info");
+                divInfo.innerHTML = `
+                    <span class="cerrar">&times;</span>
+                    <h3 class="div__titulo">${producto.titulo}</h3>
+                <div class="div__flex">
+                    <img class="div__img" src="${producto.imagen}">
+                    <p class="div__p">${producto.info}</p>
+                    </div>
+                `;
+                document.body.appendChild(divInfo);
 
+                let cerrarBoton = divInfo.querySelector(".cerrar");
+                cerrarBoton.addEventListener("click", function () {
+                    document.body.removeChild(divInfo);
+                });
+            }
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    verInfo();
+});

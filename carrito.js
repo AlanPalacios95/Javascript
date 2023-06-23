@@ -48,7 +48,6 @@ if (productosEnCarrito && productosEnCarrito.length > 0) {
     })
 }
 else {
-    contenedorCarritoVacio.classList.remove("disabled");
     contenedorCarritoProductos.classList.add("disabled");
     contenedorCarritoAcciones.classList.add("disabled");
     contenedorCarritoComprado.classList.add("disabled");

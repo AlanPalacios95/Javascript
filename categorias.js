@@ -26,7 +26,24 @@ enlacesCategorias.forEach(enlace => {
     e.currentTarget.classList.add("active");
 
     const categoriaId = e.currentTarget.id;
-    const productosElegidos = productosPorCategoria[categoriaId];
+    let productosElegidos;
+
+    switch (categoriaId) {
+      case "playstation5":
+        productosElegidos = productosPlaystation5;
+        break;
+      case "playstation4":
+        productosElegidos = productosPlaystation4;
+        break;
+      case "nintendo":
+        productosElegidos = productosNintendo;
+        break;
+      case "todos":
+        productosElegidos = productos;
+        break;
+      default:
+        productosElegidos = [];
+    }
 
     cargarProductos(productosElegidos);
 
@@ -37,4 +54,9 @@ enlacesCategorias.forEach(enlace => {
       tituloPrincipal.innerText = "Todos los productos";
     }
   });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  inicializarProductosPorCategoria();
+  verInfo();
 });
