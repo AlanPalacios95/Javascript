@@ -18,27 +18,28 @@ let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 function cargarProductos(productosElegidos) {
     contenedorProductos.innerHTML = "";
     productosElegidos.forEach(producto => {
-        const div = document.createElement("div");
-        div.classList.add("producto");
-        div.innerHTML = `
+      const div = document.createElement("div");
+      div.classList.add("producto");
+      div.innerHTML = `
         <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
         <div class="producto-detalles">
-            <h3 class="producto-titulo">${producto.titulo}</h3>
-            <p class="producto-precio">$${producto.precio}</p>
-                <span id="info" class="info">Detalles</span>
-            <button class="button producto-agregar" id="${producto.id}">
-                <span class="button_lg">
-                    <span class="button_sl"></span>
-                    <span class="button_text">Agregar</span>
-                </span>
-            </button>
+          <h3 class="producto-titulo">${producto.titulo}</h3>
+          <p class="producto-precio">$${producto.precio}</p>
+          <span id="info" class="info">Detalles</span>
+          <button class="button producto-agregar" id="${producto.id}">
+            <span class="button_lg">
+              <span class="button_sl"></span>
+              <span class="button_text">Agregar</span>
+            </span>
+          </button>
         </div>
       `;
-        contenedorProductos.append(div);
+      contenedorProductos.append(div);
     });
     actualizarBotonesAgregar();
-}
-
+  
+    verInfo();
+  }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////// BOTON AGREGAR /////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
